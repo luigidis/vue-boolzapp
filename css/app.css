@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.bg-green {
+    background-color: #009688;
+}
+
+.bg-main {
+    background-color: #D9DBD5;
+}
+
+.bg-vh-1 {
+    height: 15vh;
+}
+
+.bg-vh-2 {
+    height: 85vh;
+}
+
