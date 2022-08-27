@@ -29,6 +29,11 @@ img {
     background-color: tomato;
 }
 
+.debug .container_contact_messages {
+    border: solid 3px red;
+    flex-basis: 100%;
+}
+
 
 body {
     height: 100vh;
@@ -53,9 +58,9 @@ body {
 
 .container_main {
     display: flex;
-    max-height: 900px;
+    /* max-height: 900px; */
     background-color: white;
-    width: 1400px;
+    width: 1200px;
     position: absolute;
     margin: 0 auto;
     left: 0;
@@ -74,8 +79,8 @@ body {
 
 .contact_hover {
     flex-basis: 75%;
-    
 }
+    
 
 .search_tool {
     width: 100%;
@@ -120,8 +125,54 @@ body {
     vertical-align: middle;
     margin-top: 10px;
 }
-   
+
+.text {
     
+}
+   
+
+.container_text_message {
+    flex-basis: 70%;
+}
+
+.message_tool {
+    width: 100%;
+}
+
+.container_contact_messages {
+    background-image: url(../assets/mine.jpg);
+    /* height: 100px; */
+}
+
+.container_center {
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+    
+
+
+.sent_by_user {
+    border-radius: 50px;
+    border-color: red;
+    background-color: white;
+    max-width: 80%;
+    align-self: flex-start;
+}
+
+.sent_by_contact {
+    border-radius: 50px;
+    border-color: green;
+    background-color: limegreen;
+    text-align: end;
+    max-width: 80%;
+    align-self: flex-end;
+}
+
+
+
 
     
 
