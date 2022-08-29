@@ -182,14 +182,18 @@ ul, ol, menu {
     overflow: scroll;
 }
 
-.messages {
-    flex-grow: 1;
+.container-messages {
     background-image: url(../assets/mine.jpg);
     background-size: cover;
+    flex-grow: 1;
+}
+.messages {
+    
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    
 }
+    
 
 .box_mex {
     padding: 15px;

@@ -65,12 +65,14 @@
                 <i class="fa-solid fa-paperclip"></i>
                 <i class="fa-solid fa-ellipsis-vertical"></i>
             </div>
-            <div class="messages px-3 pt-3"
-                v-for="message in contacts[currentContact].messages">
-                <div class="box_mex"
-                    :class="message.status==='sent' ?  'sent' : 'received'">
-                    <p>{{message.message}}</p>
-                    <div class="message_time">12:00</div>
+            <div class="container-messages">
+                <div class="messages px-3 pt-3"
+                    v-for="message in contacts[currentContact].messages">
+                    <div class="box_mex"
+                        :class="message.status==='sent' ?  'sent' : 'received'">
+                        <p>{{message.message}}</p>
+                        <div class="message_time">12:00</div>
+                    </div>
                 </div>
             </div>
             <div class="write_message">
