@@ -198,6 +198,7 @@ ul, ol, menu {
 .box_mex {
     padding: 15px;
     border-radius: 5px;
+    min-width: 150px;
 }
 
 .sent {
