@@ -37,7 +37,7 @@
                 <input type="text" placeholder="Cerca o inizia una nuova chat">
             </div>
             <ul class="contacts fs-12">
-                <li v-for="contact in contacts" class="contact">
+                <li v-for="contact in contacts" class="contact active">
                     <figure class="avatar">
                         <img :src="contact.avatar" alt=>
                     </figure>
@@ -50,13 +50,15 @@
             </ul>
         </div>
         <div class="chat">
-            <div class="toolbar">
+            <div class="toolbar"
+                :class="contact.visible ? 'visible' : 'not-visible'"
+                v-for="contact in contacts">
                 <figure class="avatar">
-                    <img src="./assets/avatar_1.jpg" alt="">
+                    <img :src=contact.avatar alt="">
                 </figure>
                 <div class="contact_name">
-                    <h3>Sofia</h3>
-                    <p>Ultimo accesso oggi alle hh::mm</p>
+                    <h3>{{contact.name}}</h3>
+                    <p>{{contact.messages.date}}</p>
                 </div>
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <i class="fa-solid fa-paperclip"></i>

@@ -36,7 +36,17 @@ ul, ol, menu {
 }
 
 /* #region Utility Class */
+.visible {
+    display: block;
+}
 
+.not-visible {
+    display: none!important;
+}
+
+.active {
+    background-color: rgba(128, 128, 128, 0.405);
+}
 .color-grey {
     color: rgba(128, 128, 128, 0.504);
 }
@@ -168,6 +178,9 @@ ul, ol, menu {
     
 
 /* #region Messages Space */ 
+.chat {
+    overflow: scroll;
+}
 
 .messages {
     flex-grow: 1;
@@ -175,8 +188,7 @@ ul, ol, menu {
     background-size: cover;
     display: flex;
     flex-direction: column;
-    gap: 10px
-    ;
+    gap: 10px;
 }
 
 .box_mex {

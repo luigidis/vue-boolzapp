@@ -26,7 +26,7 @@ contacts = [
     {
     name: 'Fabio',
     avatar: './assets/avatar_2.jpg',
-    visible: true,
+    visible: false,
     messages: [
     {
     date: '20/03/2020 16:30:00',
@@ -48,7 +48,7 @@ contacts = [
     {
     name: 'Samuele',
     avatar: './assets/avatar_3.jpg',
-    visible: true,
+    visible: false,
     messages: [
     {
     date: '28/03/2020 10:10:40',
@@ -70,7 +70,7 @@ contacts = [
     {
     name: 'Alessandro B.',
     avatar: './assets/avatar_4.jpg',
-    visible: true,
+    visible: false,
     messages: [
     {
     date: '10/01/2020 15:30:55',
@@ -87,7 +87,7 @@ contacts = [
     {
     name: 'Alessandro L.',
     avatar: './assets/avatar_5.jpg',
-    visible: true,
+    visible: false,
     messages: [
     {
     date: '10/01/2020 15:30:55',
@@ -104,7 +104,7 @@ contacts = [
     {
     name: 'Claudia',
     avatar: './assets/avatar_6.jpg',
-    visible: true,
+    visible: false,
     messages: [
     {
     date: '10/01/2020 15:30:55',
@@ -126,7 +126,7 @@ contacts = [
     {
     name: 'Federico',
     avatar: './assets/avatar_7.jpg',
-    visible: true,
+    visible: false,
     messages: [
     {
     date: '10/01/2020 15:30:55',
@@ -143,7 +143,7 @@ contacts = [
     {
     name: 'Davide',
     avatar: './assets/avatar_8.jpg',
-    visible: true,
+    visible: false,
     messages: [
     {
     date: '10/01/2020 15:30:55',
@@ -164,6 +164,12 @@ contacts = [
     }
     ]
 
+    for (let i = 0; i < contacts.lenght; i++) {
+        console.log(contacts[i].name)
+        console.log(contacts.messages[date[i]])
+    }
+    
+
     const app = new Vue ({
         el: '#app',
         data: {
@@ -173,3 +179,7 @@ contacts = [
             
         },
     })
+
+
+
+   
