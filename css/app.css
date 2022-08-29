@@ -35,14 +35,20 @@ ul, ol, menu {
     background-color: white;
 }
 
-/* Utility Class */
+/* #region Utility Class */
+
+.color-grey {
+    color: rgba(128, 128, 128, 0.504);
+}
 
 .align-start {
     align-self: flex-start;
 }
-
-.py-1 {
+.p-1 {
     padding: 0.50rem;
+}
+.py-1 {
+    padding: 0.50rem 0;
 }
 
 .px-3 {
@@ -69,14 +75,10 @@ ul, ol, menu {
     font-size: 14px;
 }
 
-/* Layout Base */
+/* #endregion Utility Class */
 
-/* .sidebar,
-.chat
-{
-    border: solid 1px black;
-    padding: 20px;
-} */
+/* #region Layout Base */
+
 
 .sidebar {
     width: 320px;
@@ -91,9 +93,12 @@ ul, ol, menu {
 .sidebar {
     display: flex;
     flex-direction: column;
+
 }
 
-/* Sidebar */
+/* #endregion Layout Base */
+
+/* #region Sidebar */
 
 .contacts
 .contact {
@@ -152,9 +157,17 @@ ul, ol, menu {
     justify-content: center;
     align-items: center;
 }
+
+.contact_time {
+    color: rgba(128, 128, 128, 0.504);
+    font-size: 14px;
+    font-weight: bold
+}
+
+/* #endregion Sidebar */
     
 
-/* Messages Space */ 
+/* #region Messages Space */ 
 
 .messages {
     flex-grow: 1;
@@ -197,11 +210,21 @@ ul, ol, menu {
     width: 70%;
 }
 
-/* Hover */ 
+.message_time {
+    text-align: end;
+    padding: 10px 5px 0px 0px;
+    font-size: 12px;
+}
+
+/* #endregion Messages Space */
+
+/* #region Hover */ 
 
 .contact:hover {
     background-color: rgba(128, 128, 128, 0.405);
 }
+
+/* #endregion Hover */
 
 
     

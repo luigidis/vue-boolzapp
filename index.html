@@ -43,8 +43,9 @@
                     </figure>
                     <div class="contact_name">
                         <h3>{{contact.name}}</h3>
+                        <p class="color-grey py-1">Ultimo messaggio inviato</p>
                     </div>
-                    <p class="align-start py-1">Ultimo messaggio</p>
+                    <p class="align-start p-1 contact_time">12:00</p>
                 </li>
             </ul>
         </div>
@@ -62,13 +63,19 @@
                 <i class="fa-solid fa-ellipsis-vertical"></i>
             </div>
             <div class="messages px-3 pt-3">
-                <div class="box_mex received">Messaggio ricevuto</div>
-                <div class="box_mex sent">Messaggio mandato</div>
+                <div class="box_mex received">
+                    <p>Messaggio Ricevuto</p>
+                    <div class="message_time">12:00</div>
+                </div>
+                <div class="box_mex sent">
+                    <p>Messaggio Mandato</p>
+                    <div class="message_time">12:00</div>
+                </div>
             </div>
             <div class="write_message">
-                <i class="fa-solid fa-face-grin py-1"></i>
+                <i class="fa-solid fa-face-grin p-1"></i>
                 <input type="text" placeholder="Scrivi nuovo messaggio">
-                <i class="fa-solid fa-microphone py-1"></i>
+                <i class="fa-solid fa-microphone p-1"></i>
             </div>
         </div>
     </div>
