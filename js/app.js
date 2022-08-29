@@ -164,16 +164,16 @@ contacts = [
     }
     ]
 
-    for (let i = 0; i < contacts.lenght; i++) {
-        console.log(contacts[i].name)
-        console.log(contacts.messages[date[i]])
-    }
+
+
+    console.log(contacts[0].messages[0])
     
 
     const app = new Vue ({
         el: '#app',
         data: {
             contacts: contacts,
+            currentContact: 0,
         },
         methods: {
             

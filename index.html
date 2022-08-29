@@ -37,9 +37,11 @@
                 <input type="text" placeholder="Cerca o inizia una nuova chat">
             </div>
             <ul class="contacts fs-12">
-                <li v-for="contact in contacts" class="contact active">
+                <li v-for="(contact, index) in contacts"
+                    @click="currentContact=index" 
+                    class="contact">
                     <figure class="avatar">
-                        <img :src="contact.avatar" alt=>
+                        <img :src="contact[currentContact].avatar" alt="">
                     </figure>
                     <div class="contact_name">
                         <h3>{{contact.name}}</h3>
@@ -48,23 +50,23 @@
                     <p class="align-start p-1 contact_time">12:00</p>
                 </li>
             </ul>
+                    
         </div>
         <div class="chat">
-            <div class="toolbar"
-                :class="contact.visible ? 'visible' : 'not-visible'"
-                v-for="contact in contacts">
+            <div class="toolbar">
                 <figure class="avatar">
-                    <img :src=contact.avatar alt="">
+                    <img :src="contact[currentContact].avatar" alt="">
                 </figure>
                 <div class="contact_name">
-                    <h3>{{contact.name}}</h3>
-                    <p>{{contact.messages.date}}</p>
+                    <h3>{{contact[currentContact].name}}</h3>
+                    <p>Data 12:00</p>
                 </div>
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <i class="fa-solid fa-paperclip"></i>
                 <i class="fa-solid fa-ellipsis-vertical"></i>
             </div>
-            <div class="messages px-3 pt-3">
+            <div class="messages px-3 pt-3"
+                :class="contact.visible ? 'visible' : 'not-visible'">
                 <div class="box_mex received">
                     <p>Messaggio Ricevuto</p>
                     <div class="message_time">12:00</div>
