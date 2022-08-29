@@ -13,7 +13,7 @@ img {
     height: 50px;
 } */
 
-.debug .my_profile {
+/* .debug .my_profile {
     background-color: green;
 }
 
@@ -32,7 +32,7 @@ img {
 .debug .container_contact_messages {
     border: solid 3px red;
     flex-basis: 100%;
-}
+} */
 
 
 body {
@@ -126,9 +126,7 @@ body {
     margin-top: 10px;
 }
 
-.text {
-    
-}
+
    
 
 .container_text_message {
@@ -141,7 +139,7 @@ body {
 
 .container_contact_messages {
     background-image: url(../assets/mine.jpg);
-    /* height: 100px; */
+   
 }
 
 .container_center {
@@ -155,7 +153,7 @@ body {
 
 
 .sent_by_user {
-    border-radius: 50px;
+    border-radius: 5px;
     border-color: red;
     background-color: white;
     max-width: 80%;
@@ -163,10 +161,10 @@ body {
 }
 
 .sent_by_contact {
-    border-radius: 50px;
+    border-radius: 5px;
     border-color: green;
     background-color: limegreen;
-    text-align: end;
+    /* text-align: end; */
     max-width: 80%;
     align-self: flex-end;
 }
