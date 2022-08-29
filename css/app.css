@@ -10,7 +10,8 @@ body {
     justify-content: center;
     align-items: center;
     display: flex;
-    background: linear-gradient(180deg, #009688 0%, #FFFFFF 25%, #D9DBD5 75%);
+    background: rgb(0,150,136);
+    background: linear-gradient(180deg, rgba(0,150,136,1) 15%, rgba(217,219,213,1) 15%);
 }
 
 img {
