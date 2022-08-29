@@ -10,6 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     display: flex;
+    background: linear-gradient(180deg, #009688 0%, #FFFFFF 25%, #D9DBD5 75%);
 }
 
 img {
@@ -63,6 +64,10 @@ ul, ol, menu {
     color: grey;
 }
 
+.fs-12 {
+    font-size: 14px;
+}
+
 /* Layout Base */
 
 /* .sidebar,
@@ -89,9 +94,9 @@ ul, ol, menu {
 
 /* Sidebar */
 
-.toolbar,
+.contacts
 .contact {
-    padding: 8px 6px;
+    border-top: 1px solid rgba(128, 128, 128, 0.505);
 }
    
 
@@ -100,6 +105,7 @@ ul, ol, menu {
     display: flex;
     align-items: center;
     gap: 10px;
+    padding: 8px 6px;
 }
 
 .avatar {
@@ -112,6 +118,7 @@ ul, ol, menu {
 .contact_name {
     margin-right: auto;
 }
+    
 
 .search_tool input {
     width: 100%;
@@ -187,6 +194,12 @@ ul, ol, menu {
     border-radius: 5px;
     padding: 10px;
     width: 70%;
+}
+
+/* Hover */ 
+
+.contact:hover {
+    background-color: rgba(128, 128, 128, 0.405);
 }
 
 

@@ -1,9 +1,9 @@
 console.log('yo')
 
-contacts: [
+contacts = [
     {
     name: 'Michele',
-    avatar: './assets/avatar_1',
+    avatar: './assets/avatar_1.jpg',
     visible: true,
     messages: [
     {
@@ -25,7 +25,7 @@ contacts: [
     },
     {
     name: 'Fabio',
-    avatar: './assets/avatar_2',
+    avatar: './assets/avatar_2.jpg',
     visible: true,
     messages: [
     {
@@ -47,7 +47,7 @@ contacts: [
     },
     {
     name: 'Samuele',
-    avatar: './assets/avatar_3',
+    avatar: './assets/avatar_3.jpg',
     visible: true,
     messages: [
     {
@@ -69,7 +69,7 @@ contacts: [
     },
     {
     name: 'Alessandro B.',
-    avatar: './assets/avatar_4',
+    avatar: './assets/avatar_4.jpg',
     visible: true,
     messages: [
     {
@@ -86,7 +86,7 @@ contacts: [
     },
     {
     name: 'Alessandro L.',
-    avatar: './assets/avatar_5',
+    avatar: './assets/avatar_5.jpg',
     visible: true,
     messages: [
     {
@@ -103,7 +103,7 @@ contacts: [
     },
     {
     name: 'Claudia',
-    avatar: './assets/avatar_6',
+    avatar: './assets/avatar_6.jpg',
     visible: true,
     messages: [
     {
@@ -125,7 +125,7 @@ contacts: [
     },
     {
     name: 'Federico',
-    avatar: './assets/avatar_7',
+    avatar: './assets/avatar_7.jpg',
     visible: true,
     messages: [
     {
@@ -142,7 +142,7 @@ contacts: [
     },
     {
     name: 'Davide',
-    avatar: './assets/avatar_8',
+    avatar: './assets/avatar_8.jpg',
     visible: true,
     messages: [
     {
@@ -165,8 +165,9 @@ contacts: [
     ]
 
     const app = new Vue ({
+        el: '#app',
         data: {
-            
+            contacts: contacts,
         },
         methods: {
             
