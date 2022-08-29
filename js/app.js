@@ -174,6 +174,7 @@ contacts = [
         data: {
             contacts: contacts,
             currentContact: 0,
+            filter: '',
         },
         methods: {
             

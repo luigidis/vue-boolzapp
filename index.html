@@ -34,11 +34,12 @@
                 </div>
             </div>
             <div class="search_tool">
-                <input type="text" placeholder="Cerca o inizia una nuova chat">
+                <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="filter">
             </div>
             <ul class="contacts fs-12">
                 <li v-for="(contact,index) in contacts"
-                    @click="currentContact=index" 
+                    @click="currentContact=index"
+                    v-show="contact.name.includes(filter)" 
                     class="contact">
                     <figure class="avatar">
                         <img :src="contact.avatar" alt="">
