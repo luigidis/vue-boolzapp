@@ -38,7 +38,7 @@
             </div>
             <ul class="contacts fs-12">
                 <li v-for="(contact,index) in contacts"
-                    @click="currentContact=index"
+                    @click="setCurrentContact(index)"
                     v-show="contact.name.includes(filter)" 
                     class="contact">
                     <figure class="avatar">
@@ -78,7 +78,10 @@
             </div>
             <div class="write_message">
                 <i class="fa-solid fa-face-grin p-1"></i>
-                <input type="text" placeholder="Scrivi nuovo messaggio">
+                <input  type="text" 
+                        placeholder="Scrivi nuovo messaggio" 
+                        v-model="messageToPush" 
+                        @keyup.enter="sentMessagePush(messageToPush,currentContact)">
                 <i class="fa-solid fa-microphone p-1"></i>
             </div>
         </div>

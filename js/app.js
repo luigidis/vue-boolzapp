@@ -164,23 +164,36 @@ contacts = [
     }
     ]
 
-
-
-    console.log(contacts[0].messages[0])
-    
-
     const app = new Vue ({
         el: '#app',
         data: {
             contacts: contacts,
             currentContact: 0,
             filter: '',
+            messageToPush: '',
         },
         methods: {
-            
+            setCurrentContact(i) {
+                this.currentContact = i;
+            },
+            sentMessagePush(message,i) {
+                message = {
+                    date: '',
+                    message: this.messageToPush,
+                    status: 'sent'
+                }
+                this.contacts[i].messages.push(message)
+                this.messageToPush = ''
+            }
+                
         },
     })
 
 
+    
+    
 
+
+
+// stato focus all'input 
    
