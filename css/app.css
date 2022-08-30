@@ -35,6 +35,22 @@ ul, ol, menu {
     background-color: white;
 }
 
+.spin {
+    animation-name: spin;
+    animation-timing-function: linear;
+    animation-duration: 200ms;
+    animation-iteration-count: 1;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(200deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 /* #region Utility Class */
 .visible {
     display: block!important;
@@ -42,6 +58,14 @@ ul, ol, menu {
 
 .not-visible {
     display: none!important;
+}
+
+.fs-15 {
+    font-size: 15px;
+}
+
+.text-green {
+    color: rgb(60, 97, 4);
 }
 
 .active {
@@ -114,13 +138,16 @@ ul, ol, menu {
 .contact {
     border-top: 1px solid rgba(128, 128, 128, 0.505);
 }
-   
+
+.toolbar i {
+    padding-right: 10px;
+}
 
 .toolbar,
 .contact {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     padding: 8px 6px;
 }
 
@@ -250,13 +277,18 @@ ul, ol, menu {
 
 /* #endregion Messages Space */
 
-/* #region Hover */ 
+/* #region Hover and Focus */ 
 
 .contact:hover {
     background-color: rgba(128, 128, 128, 0.405);
 }
 
 /* #endregion Hover */
+
+
+
+
+
 
 
 

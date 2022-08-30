@@ -171,7 +171,8 @@ contacts = [
             currentContact: 0,
             filter: '',
             messageToPush: '',
-            aVis: false
+            aVis: false,
+            isSearching: false
         },
             
             
@@ -199,6 +200,7 @@ contacts = [
                     messages.push(messageOk)
                 },2000)
             }
+            
         },
     })
                     

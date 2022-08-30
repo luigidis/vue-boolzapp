@@ -7,6 +7,7 @@
     <title>BoolZapp</title>
     <link rel="stylesheet" href="./css/app.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -23,7 +24,6 @@
                 <i class="fa-solid fa-message"></i>
                 <i class="fa-solid fa-ellipsis-vertical"></i>
             </div>
-                    
             <div class="notifies">
                 <div class="box_bell">
                     <i class="fa-solid fa-bell-slash"></i>
@@ -35,9 +35,16 @@
             </div>
             <div class="search_tool">
                 <div class="glass">
-                    <i class="icon_glass fa-solid fa-magnifying-glass"></i>
+                    <i  class="icon_glass fa-solid fa-magnifying-glass"
+                        :class="isSearching ? 'not-visible' : 'visible'"></i>
+                    <i  class="icon_glass fs-15 text-green fa-solid fa-arrow-left"
+                        :class="isSearching ? 'visible spin' : 'not-visible'"></i>
                 </div>
-                <input type="search" placeholder="Cerca o inizia una nuova chat" v-model="filter">
+                <input  type="search" 
+                        placeholder="Cerca o inizia una nuova chat" 
+                        v-model="filter"
+                        @focus="isSearching = true"
+                        @blur="isSearching = false">
             </div>
             <ul class="contacts fs-12">
                 <li v-for="(contact,index) in contacts"
@@ -83,18 +90,20 @@
                 <i class="fa-solid fa-face-grin p-1"></i>
                 <input  type="text" 
                         placeholder="Scrivi nuovo messaggio" 
-                        v-model="messageToPush" 
-                        @keyup.enter="sentMessagePush"
-                        v-if="messageToPush !== '' ? aVis = true : aVis = false">
+                        v-model="messageToPush"
+                        @keyup="messageToPush !== '' ? aVis = true : aVis = false" 
+                        @keyup.enter="sentMessagePush">
                 <i  class="fa-solid fa-microphone p-1"
                     :class="aVis ? 'not-visible' : 'visible'">
                 </i>
                 <i  class="fa-solid fa-chevron-right p-1"
-                    :class="aVis ? 'visible' : 'not-visible'">
+                    :class="aVis ? 'visible' : 'not-visible'"
+                    @click="sentMessagePush">
                 </i>
             </div>
         </div>
     </div>
+                    
                 
 
                     
