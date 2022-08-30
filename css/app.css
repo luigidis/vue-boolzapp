@@ -189,8 +189,9 @@ ul, ol, menu {
     padding-left: 15px;
 }
 
+/* #endregion Sidebar */
 
-/* Sidebar Notifies */
+/* #region Notifies */
 
 .notifies {
     display: flex;
@@ -216,7 +217,7 @@ ul, ol, menu {
     font-weight: bold
 }
 
-/* #endregion Sidebar */
+/* #endregion Notifies */
 
 /* #region Messages Space */ 
 .chat {

@@ -86,8 +86,9 @@
                                 @click="hide(i)"></i>
                             <div    class="window-option "
                                     :class=message.option>
-                                <p>Message Info</p>
-                                <p @click="deleteMessage(i)">Delete Message</p>
+                                <p class="py-1">Message Info</p>
+                                <p  @click="deleteMessage(i)"
+                                    class="py-1">Delete Message</p>
                             </div>
                         </div>
                         <p>{{message.message}}</p>
