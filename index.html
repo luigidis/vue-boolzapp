@@ -82,11 +82,13 @@
                         placeholder="Scrivi nuovo messaggio" 
                         v-model="messageToPush" 
                         @keyup.enter="sentMessagePush"
-                        v-if="messageToPush != '' ? aVis = true : aVis=false">
+                        v-if="messageToPush !== '' ? aVis = true : aVis = false">
                 <i  class="fa-solid fa-microphone p-1"
-                    :class="aVis ? 'not-visible' : 'visible'"></i>
-                <i  class="fa-solid fa-chevron-right not-visible"
-                    :class="aVis ? 'visible' : 'not-visible'"></i>
+                    :class="aVis ? 'not-visible' : 'visible'">
+                </i>
+                <i  class="fa-solid fa-chevron-right p-1"
+                    :class="aVis ? 'visible' : 'not-visible'">
+                </i>
             </div>
         </div>
     </div>
