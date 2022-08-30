@@ -177,6 +177,9 @@ contacts = [
                 this.currentContact = i;
             },
             sentMessagePush(message,i) {
+                //controllo se ciò che ha scritto l'utente è vuoto o solo spazi
+                message = this.messageToPush.trim()
+                if (message === '') return
                 message = {
                     date: '',
                     message: this.messageToPush,
