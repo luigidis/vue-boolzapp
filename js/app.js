@@ -171,22 +171,23 @@ contacts = [
             currentContact: 0,
             filter: '',
             messageToPush: '',
-            messageOk: ''
+            
         },
         methods: {
             setCurrentContact(i) {
                 this.currentContact = i;
             },
-            sentMessagePush(message,i) {
+            sentMessagePush() {
                 //controllo se ciò che ha scritto l'utente è vuoto o solo spazi
-                message = this.messageToPush.trim()
-                if (message === '') return
+                cleanedText = this.messageToPush.trim()
+                if (cleanedText === '') return
+                messages = this.contacts[this.currentContact].messages
                 message = {
                     date: '',
-                    message: this.messageToPush,
+                    message: cleanedText,
                     status: 'sent'
                 }
-                this.contacts[i].messages.push(message)
+                messages.push(message)
                 this.messageToPush = ''
                 setTimeout(() => {
                     const messageOk = {
@@ -194,8 +195,8 @@ contacts = [
                         message: 'Ok!',
                         status: 'received',
                     }
-                    console.log(this.contacts[i].messages)
-                    this.contacts[i].messages.push(messageOk)
+                    console.log(messages)
+                    messages.push(messageOk)
                 },2000)
             }
             
