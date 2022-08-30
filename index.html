@@ -78,12 +78,14 @@
             </div>
             <div class="container-messages">
                 <div class="messages px-3 pt-3"
-                    v-for="message in contacts[currentContact].messages">
+                    v-for="(message,i) in contacts[currentContact].messages">
                     <div class="box_mex"
                         :class="message.status==='sent' ?  'sent' : 'received'">
                         <div class="icon-message">
-                            <i class="fa-solid fa-chevron-down"></i>
-                            <div class="window-option">
+                            <i  class="fa-solid fa-chevron-down"
+                                @click="hide(i)"></i>
+                            <div    class="window-option "
+                                    :class=message.option>
                                 <p>Message Info</p>
                                 <p>Delete Message</p>
                             </div>
