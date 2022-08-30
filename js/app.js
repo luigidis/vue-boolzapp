@@ -1,4 +1,4 @@
-console.log('yo')
+
 
 contacts = [
     {
@@ -171,14 +171,15 @@ contacts = [
             currentContact: 0,
             filter: '',
             messageToPush: '',
-            
+            aVis: false
         },
+            
+            
         methods: {
             setCurrentContact(i) {
                 this.currentContact = i;
             },
             sentMessagePush() {
-                //controllo se ciò che ha scritto l'utente è vuoto o solo spazi
                 cleanedText = this.messageToPush.trim()
                 if (cleanedText === '') return
                 messages = this.contacts[this.currentContact].messages
@@ -195,14 +196,15 @@ contacts = [
                         message: 'Ok!',
                         status: 'received',
                     }
-                    console.log(messages)
                     messages.push(messageOk)
                 },2000)
             }
-            
         },
     })
+                    
+            
 
+                
 
     
     

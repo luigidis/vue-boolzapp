@@ -60,7 +60,7 @@
                 </figure>
                 <div class="contact_name">
                     <h3>{{contacts[currentContact].name}}</h3>
-                    <p>Data 12:00</p>
+                    <p>Ultimo accesso</p>
                 </div>
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <i class="fa-solid fa-paperclip"></i>
@@ -72,7 +72,7 @@
                     <div class="box_mex"
                         :class="message.status==='sent' ?  'sent' : 'received'">
                         <p>{{message.message}}</p>
-                        <div class="message_time">12:00</div>
+                        <div class="message_time">{{message.date}}</div>
                     </div>
                 </div>
             </div>
@@ -81,8 +81,12 @@
                 <input  type="text" 
                         placeholder="Scrivi nuovo messaggio" 
                         v-model="messageToPush" 
-                        @keyup.enter="sentMessagePush">
-                <i class="fa-solid fa-microphone p-1"></i>
+                        @keyup.enter="sentMessagePush"
+                        v-if="messageToPush != '' ? aVis = true : aVis=false">
+                <i  class="fa-solid fa-microphone p-1"
+                    :class="aVis ? 'not-visible' : 'visible'"></i>
+                <i  class="fa-solid fa-chevron-right not-visible"
+                    :class="aVis ? 'visible' : 'not-visible'"></i>
             </div>
         </div>
     </div>
