@@ -230,9 +230,20 @@ contacts = [
                     this.contacts[this.currentContact].messages[index].option = 'not-visible'
                 }
                  else {this.contacts[this.currentContact].messages[index].option = 'visible'}
+            },
+            deleteMessage (index) {
+                console.log('clicked on delete')
+                const message = this.contacts[this.currentContact].messages
+                message.splice(index)
             }
         },
     })
+                
+                
+                
+                
+                
+                
                     
             
 

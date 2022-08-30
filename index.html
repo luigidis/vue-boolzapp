@@ -87,7 +87,7 @@
                             <div    class="window-option "
                                     :class=message.option>
                                 <p>Message Info</p>
-                                <p>Delete Message</p>
+                                <p @click="deleteMessage(i)">Delete Message</p>
                             </div>
                         </div>
                         <p>{{message.message}}</p>
