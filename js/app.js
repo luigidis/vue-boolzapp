@@ -171,6 +171,7 @@ contacts = [
             currentContact: 0,
             filter: '',
             messageToPush: '',
+            messageOk: ''
         },
         methods: {
             setCurrentContact(i) {
@@ -187,8 +188,17 @@ contacts = [
                 }
                 this.contacts[i].messages.push(message)
                 this.messageToPush = ''
+                setTimeout(() => {
+                    const messageOk = {
+                        date: '',
+                        message: 'Ok!',
+                        status: 'received',
+                    }
+                    console.log(this.contacts[i].messages)
+                    this.contacts[i].messages.push(messageOk)
+                },2000)
             }
-                
+            
         },
     })
 
