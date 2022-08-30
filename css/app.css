@@ -279,16 +279,20 @@ ul, ol, menu {
     font-size: 12px;
     padding-bottom: 5px;
     text-align: end!important;
-    /* position: relative; */
+    position: relative;
 }
 
 .window-option {
     z-index: 999;
     position: absolute;
     background-color: beige;
-    /* text-align: end; */
-    /* top: 0; */
+    right: 0;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
 }
+    
+    
 
 
 /* #endregion Messages Space */

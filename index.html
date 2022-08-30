@@ -83,10 +83,10 @@
                         :class="message.status==='sent' ?  'sent' : 'received'">
                         <div class="icon-message">
                             <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <div class="window-option">
-                            <p>Message Info</p>
-                            <p>Delete Message</p>
+                            <div class="window-option">
+                                <p>Message Info</p>
+                                <p>Delete Message</p>
+                            </div>
                         </div>
                         <p>{{message.message}}</p>
                         <div class="message_time">{{message.date}}</div>
