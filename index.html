@@ -81,6 +81,13 @@
                     v-for="message in contacts[currentContact].messages">
                     <div class="box_mex"
                         :class="message.status==='sent' ?  'sent' : 'received'">
+                        <div class="icon-message">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="window-option">
+                            <p>Message Info</p>
+                            <p>Delete Message</p>
+                        </div>
                         <p>{{message.message}}</p>
                         <div class="message_time">{{message.date}}</div>
                     </div>

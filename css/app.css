@@ -237,7 +237,7 @@ ul, ol, menu {
     
 
 .box_mex {
-    padding: 15px;
+    padding: 5px 15px 15px 15px;
     border-radius: 5px;
     min-width: 150px;
 }
@@ -274,6 +274,22 @@ ul, ol, menu {
     padding: 10px 5px 0px 0px;
     font-size: 12px;
 }
+
+.icon-message {
+    font-size: 12px;
+    padding-bottom: 5px;
+    text-align: end!important;
+    /* position: relative; */
+}
+
+.window-option {
+    z-index: 999;
+    position: absolute;
+    background-color: beige;
+    /* text-align: end; */
+    /* top: 0; */
+}
+
 
 /* #endregion Messages Space */
 
