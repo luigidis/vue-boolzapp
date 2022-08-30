@@ -34,7 +34,10 @@
                 </div>
             </div>
             <div class="search_tool">
-                <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="filter">
+                <div class="glass">
+                    <i class="icon_glass fa-solid fa-magnifying-glass"></i>
+                </div>
+                <input type="search" placeholder="Cerca o inizia una nuova chat" v-model="filter">
             </div>
             <ul class="contacts fs-12">
                 <li v-for="(contact,index) in contacts"

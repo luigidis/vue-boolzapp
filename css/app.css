@@ -141,12 +141,27 @@ ul, ol, menu {
     padding-left: 35px;
     height: 30px;
     border: none;
+    outline: none;
 }
 
 .search_tool {
     background-color: rgba(128, 128, 128, 0.352);
     padding: 5px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
 }
+
+.glass {
+    background-color: white;
+    height: 30px;
+}
+
+.icon_glass {
+    line-height: 30px!important;
+    padding-left: 15px;
+}
+
 
 /* Sidebar Notifies */
 
@@ -224,6 +239,7 @@ ul, ol, menu {
     border-radius: 5px;
     padding: 10px;
     width: 70%;
+    outline: none;
 }
 
 .message_time {
